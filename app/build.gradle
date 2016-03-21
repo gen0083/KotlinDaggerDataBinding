@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'kotlin-android'
 
 android {
@@ -23,6 +22,10 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
 }
 kapt{
     generateStubs = true
@@ -35,10 +38,14 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     kapt 'com.android.databinding:compiler:1.0-rc4'
 
-    compile 'com.google.dagger:dagger:2.0.2'
-    kapt 'com.google.dagger:dagger-compiler:2.0.2'
-    provided 'javax.annotation:jsr250-api:1.0'
+    // https://github.com/hotchemi/PermissionsDispatcher
+    compile 'com.github.hotchemi:permissionsdispatcher:2.0.9'
+    kapt 'com.github.hotchemi:permissionsdispatcher-processor:2.0.9'
 
     kapt 'com.github.gfx.android.orma:orma-processor:2.3.5'
     compile 'com.github.gfx.android.orma:orma:2.3.5'
+
+    compile 'com.google.dagger:dagger:2.0.2'
+    kapt 'com.google.dagger:dagger-compiler:2.0.2'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
 }
