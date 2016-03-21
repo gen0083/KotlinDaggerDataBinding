@@ -6,6 +6,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
+    dataBinding.enabled true
     defaultConfig {
         applicationId "jp.gcreate.sample.kotlindaggerdatabinding"
         minSdkVersion 15
@@ -32,6 +33,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    kapt 'com.android.databinding:compiler:1.0-rc4'
 
     compile 'com.google.dagger:dagger:2.0.2'
     kapt 'com.google.dagger:dagger-compiler:2.0.2'
