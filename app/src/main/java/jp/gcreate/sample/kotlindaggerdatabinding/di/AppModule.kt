@@ -3,7 +3,7 @@ package jp.gcreate.sample.kotlindaggerdatabinding.di
 import android.content.Context
 import dagger.Module
 import dagger.Provides
-import jp.gcreate.sample.kotlindaggerdatabinding.databases.OrmaDatabase
+import jp.gcreate.sample.kotlindaggerdatabinding.databases.TestData
 import javax.inject.Named
 import javax.inject.Singleton
 
@@ -34,8 +34,13 @@ class AppModule(private val context: Context) {
     }
 
     @Provides
-    @Singleton
-    fun provideOrmaDatabase(context: Context): OrmaDatabase {
-        return OrmaDatabase.builder(context).build()
+    fun provideTestData(): TestData {
+        return TestData(10, "from Dagger2")
     }
+
+//    @Provides
+//    @Singleton
+//    fun provideOrmaDatabase(context: Context): OrmaDatabase {
+//        return OrmaDatabase.builder(context).build()
+//    }
 }

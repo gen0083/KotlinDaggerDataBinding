@@ -21,4 +21,8 @@ class TestData{
         this.id = id
         this.name = name
     }
+
+    override fun toString(): String {
+        return "[<${this.javaClass.simpleName} id:$id name:$name>]"
+    }
 }
