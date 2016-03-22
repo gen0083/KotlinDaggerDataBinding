@@ -4,6 +4,8 @@ OrmaDatabaseの依存性をDagger2を使って注入しようというサンプ�
 
 これをすべてKotlinで作成した場合、エラーが発生しビルドできない。
 
+これは一度プロジェクトをクリーンしてコンパイルし直すと再現する。（コンパイルするタイミングによってエラーメッセージが変わったりコンパイルできたりするが、クリーンした後コンパイルすると必ず発生する）
+
 ```error: cannot access NonExistentClass
   class file for error.NonExistentClass not found
   Consult the following stack trace for details.

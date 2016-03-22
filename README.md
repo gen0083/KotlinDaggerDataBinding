@@ -2,7 +2,9 @@
 
 This is my sample project to use Dagger2 + Kotlin.
 
-But this is not compiled when generated code provide with Dagger2 in Kotlin.
+But this could not compiled when generated code provide with Dagger2 in Kotlin.
+
+This replicate when recompile after clean project.
 
 Error message:
 
