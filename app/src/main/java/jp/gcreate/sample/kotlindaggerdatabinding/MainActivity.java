@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
     String injectedString;
 
     @Inject
+    @Named("contextString")
+    String contextString;
+
+    @Inject
     OrmaDatabase orma;
 
     private ActivityMainBinding binding;
@@ -29,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         CustomApp.getComponent(this).inject(this);
         binding.simpleText.setText(injectedString);
+        binding.simpleText.setText(contextString);
 
         orma.insertIntoTestData(new TestData(1,"hoge"));
         orma.selectFromTestData().executeAsObservable().subscribe(

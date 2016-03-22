@@ -34,8 +34,8 @@ public class AppModule{
     }
 
     @Provides
-    @Named("hogeString")
-    public String provideHogeString(Context context){
+    @Named("contextString")
+    public String provideContextString(Context context){
         return context.getClass().getSimpleName();
     }
 
