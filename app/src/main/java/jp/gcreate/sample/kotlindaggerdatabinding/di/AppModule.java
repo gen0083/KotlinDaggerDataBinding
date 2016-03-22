@@ -11,10 +11,11 @@ import jp.gcreate.sample.kotlindaggerdatabinding.databases.OrmaDatabase;
 
 /**
  * Copyright 2016 G-CREATE
+ *
  */
 @Module
-public class AppModule {
-    private final Context context;
+public class AppModule{
+    private Context context;
 
     public AppModule(Context context){
         this.context = context;
@@ -43,5 +44,4 @@ public class AppModule {
     public OrmaDatabase provideOrmaDatabase(Context context){
         return OrmaDatabase.builder(context).build();
     }
-
 }
