@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
     @field:[Inject Named("injectedString")]
     lateinit var injectedString: String
 
+    @field:[Inject Named("contextString")]
+    lateinit var contextString: String
+
     @Inject
     lateinit var orma: OrmaDatabase
 
@@ -24,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         CustomApp.getComponent(this).inject(this)
         binding.simpleText.text = injectedString
+        binding.simpleText.text = contextString
 
         orma.insertIntoTestData(TestData(1, "hoge"))
         orma.selectFromTestData()

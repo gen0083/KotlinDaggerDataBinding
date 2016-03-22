@@ -28,6 +28,13 @@ class AppModule(private val context: Context) {
 
     @Provides
     @Singleton
+    @Named("contextString")
+    fun provideContextString(context: Context): String{
+        return context.javaClass.name
+    }
+
+    @Provides
+    @Singleton
     fun provideOrmaDatabase(context: Context): OrmaDatabase {
         return OrmaDatabase.builder(context).build()
     }
