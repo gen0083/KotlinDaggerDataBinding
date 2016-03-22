@@ -8,7 +8,8 @@ This replicate when recompile after clean project.
 
 Error message:
 
-```error: cannot access NonExistentClass
+```
+error: cannot access NonExistentClass
   class file for error.NonExistentClass not found
   Consult the following stack trace for details.
   com.sun.tools.javac.code.Symbol$CompletionFailure: class file for error.NonExistentClass not found

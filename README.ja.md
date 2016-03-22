@@ -6,7 +6,8 @@ OrmaDatabaseの依存性をDagger2を使って注入しようというサンプ�
 
 これは一度プロジェクトをクリーンしてコンパイルし直すと再現する。（コンパイルするタイミングによってエラーメッセージが変わったりコンパイルできたりするが、クリーンした後コンパイルすると必ず発生する）
 
-```error: cannot access NonExistentClass
+```
+error: cannot access NonExistentClass
   class file for error.NonExistentClass not found
   Consult the following stack trace for details.
   com.sun.tools.javac.code.Symbol$CompletionFailure: class file for error.NonExistentClass not found
