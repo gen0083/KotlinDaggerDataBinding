@@ -5,7 +5,9 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
-    dataBinding.enabled true
+    dataBinding{
+        enabled = true
+    }
     defaultConfig {
         applicationId "jp.gcreate.sample.kotlindaggerdatabinding"
         minSdkVersion 15
