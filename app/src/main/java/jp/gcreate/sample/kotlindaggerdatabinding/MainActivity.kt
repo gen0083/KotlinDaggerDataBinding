@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 //        binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         CustomApp.getComponent(this).inject(this)
+        setContentView(binding.root)
         binding.simpleText.text = injectedString
         binding.simpleText.text = contextString
         Log.d("test", "from dagger " + data.toString())
