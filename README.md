@@ -37,9 +37,9 @@ See [stacktrace](stacktrace) by `./gradlew :app:compileDebugJavaWithJavac --stac
 
 ~~I seems to be a bug in kapt.
 Because i can compile after comment out `provideOrmaDatabase()` and `@Inject lateinit var orma:OrmaDatabase`.
-Dagger2 can not resolve generated code by annotation processing in kapt?
+Dagger2 can not resolve generated code by annotation processing in kapt?~~
 
-I think this is similar to [issue KT-10352](https://youtrack.jetbrains.com/issue/KT-10352).~~
+~~I think this is similar to [issue KT-10352](https://youtrack.jetbrains.com/issue/KT-10352).~~
 
 It is limitation of kapt.
 

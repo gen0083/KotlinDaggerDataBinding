@@ -36,13 +36,13 @@ FAILURE: Build failed with an exception.
 
 ## 考えられる原因
 
-~~`provideOrmaDatabase()`や`@Inject lateinit var orma:OrmaDatabase`をコメントアウトすればコンパイルできることから、Dagger2がkapt上ではAnnotation Processingによって生成されたコードをうまく参照できていないと思われる。
+~~`provideOrmaDatabase()`や`@Inject lateinit var orma:OrmaDatabase`をコメントアウトすればコンパイルできることから、Dagger2がkapt上ではAnnotation Processingによって生成されたコードをうまく参照できていないと思われる。~~
 
-[kaptのIssue KT-10352](https://youtrack.jetbrains.com/issue/KT-10352)の現象に近い気がする。
+~~[kaptのIssue KT-10352](https://youtrack.jetbrains.com/issue/KT-10352)の現象に近い気がする。~~
 
-この現象は、Dagger2でAnnotation Processingによって生成されるクラスを参照するようになると生じる。
+~~この現象は、Dagger2でAnnotation Processingによって生成されるクラスを参照するようになると生じる。~~
 
-Javaオンリーの環境では再現しないことから、kaptではコード生成による依存関係をうまく裁くことができていないものと思われる。
+~~Javaオンリーの環境では再現しないことから、kaptではコード生成による依存関係をうまく裁くことができていないものと思われる。
 このサンプルの状態で言えば、Dagger2のコード生成をするのにOrmaのコード生成が必要な状態になってしまっているせいで起こる。
 先にOrmaのコード生成をすべて処理した後にDagger2のコード生成を行ってくれれば問題がないのだが、その順番をうまく解決できないのだと思う。
 kaptによるコード生成のプロセス中では、生成するコード同士がお互いを参照できないのか、もしくは生成する順番を制御できないのかもしれない。~~
