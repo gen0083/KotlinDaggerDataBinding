@@ -1,4 +1,7 @@
-# Kotlin + Dagger2 + DataBinding + Orma sample
+# [DEPRECATED] Kotlin + Dagger2 + DataBinding + Orma sample
+
+## This sample project created to reproduce problem and limitations of Annotation Processing in old versions of Kotlin 
+## But now you should use kapt3 and never versions of Kotlin that have no such problems
 
 This is my sample project to use Dagger2 + Kotlin.
 
