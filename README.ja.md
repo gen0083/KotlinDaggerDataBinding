@@ -1,4 +1,6 @@
-# Kotlin + Dagger2 + DataBinding + Orma
+# [Deprecated] Kotlin + Dagger2 + DataBinding + Orma
+
+!! このプロジェクトはkaptの古いバージョンのときの話で、現在のkaptではこのようなエラーは起こりません !!
 
 OrmaDatabaseの依存性をDagger2を使って注入しようというサンプル。
 
